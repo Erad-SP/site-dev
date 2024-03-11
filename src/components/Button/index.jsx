@@ -19,28 +19,44 @@ const variants = {
   },
 };
 const sizes = {
-  "2xl": "h-[73px] px-[23px] text-base",
-  lg: "h-[60px] px-[18px]",
-  md: "h-[56px] px-[17px] text-base",
-  xl: "h-[68px] px-[35px] text-xs",
-  xs: "h-[50px] px-[15px] text-base",
-  sm: "h-[52px] px-[35px] text-xs",
-  "3xl": "h-[84px] px-[34px] text-xs",
+  "3xl": "h-[73px] px-[23px] text-base",
+  "2xl": "h-[68px] px-[35px] text-xs",
+  xl: "h-[60px] px-[18px]",
+  lg: "h-[56px] px-[17px] text-base",
+  md: "h-[52px] px-[35px] text-xs",
+  sm: "h-[50px] px-[15px] text-base",
+  xs: "h-[36px] px-[34px] text-xs",
 };
 
-const Button = ({
-  children,
-  className = "",
-  leftIcon,
-  rightIcon,
-  shape = "",
-  variant = "outline",
-  size = "3xl",
-  color = "gray_700",
-  ...restProps
-}) => {
+const Button = ({children, className = "", leftIcon, rightIcon, shape = "", variant = "outline", size = "xs", color = "gray_700", url, scrollOffset = 0, ...restProps}) => {
+
+  const handleClick = () => {
+    if (url) {
+      // Check if URL is internal or external
+      if (url.startsWith("http") || url.startsWith("//")) {
+        // External URL
+        window.open(url, "_blank");
+      } else {
+        // Internal URL
+        window.location.href = url;
+      }
+    }
+
+    if (scrollOffset !== 0) {
+      // Calculate the position to scroll to
+    const targetElement = document.getElementById("/"); // Replace "scrollTarget" with the id of the target element
+    if (targetElement) {
+      const targetOffset = targetElement.offsetTop;
+      window.scrollTo({
+        top: targetOffset + scrollOffset,
+        behavior: "smooth" // Optional: Smooth scrolling
+      });
+    }
+    }
+  };
+
   return (
-    <button
+    <button onClick={handleClick}
       className={`${className} flex items-center justify-center text-center cursor-pointer ${(shape && shapes[shape]) || ""} ${(size && sizes[size]) || ""} ${(variant && variants[variant]?.[color]) || ""}`}
       {...restProps}
     >
@@ -57,7 +73,7 @@ Button.propTypes = {
   leftIcon: PropTypes.node,
   rightIcon: PropTypes.node,
   shape: PropTypes.oneOf(["round", "square"]),
-  size: PropTypes.oneOf(["2xl", "lg", "md", "xl", "xs", "sm", "3xl"]),
+  size: PropTypes.oneOf(["3xl", "2xl", "xl", "lg", "md", "sm", "xs"]),
   variant: PropTypes.oneOf(["fill", "outline"]),
   color: PropTypes.oneOf(["red_400", "white_A700_0c", "white_A700", "red_700", "gray_200", "gray_700"]),
 };

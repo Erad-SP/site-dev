@@ -1,13 +1,6 @@
 @font-face {
   font-display: swap;
   font-style: normal;
-  src: url("/public/fonts/RalewayRomanSemiBold.ttf");
-  font-family: "Raleway";
-  font-weight: 600;
-}
-@font-face {
-  font-display: swap;
-  font-style: normal;
   src: url("/public/fonts/RalewayRomanBold.ttf");
   font-family: "Raleway";
   font-weight: 700;
@@ -18,6 +11,13 @@
   src: url("/public/fonts/RalewayBold.ttf");
   font-family: "Raleway";
   font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("/public/fonts/RalewayRomanSemiBold.ttf");
+  font-family: "Raleway";
+  font-weight: 600;
 }
 @font-face {
   font-display: swap;
@@ -39,11 +39,4 @@
   src: url("/public/fonts/InterSemiBold.ttf");
   font-family: "Inter";
   font-weight: 600;
-}
-@font-face {
-  font-display: swap;
-  font-style: normal;
-  src: url("/public/fonts/InterRegular.ttf");
-  font-family: "Inter";
-  font-weight: 400;
 }
