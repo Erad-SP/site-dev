@@ -2,10 +2,6 @@ import React from "react";
 
 import { flexRender, getCoreRowModel, useReactTable, getSortedRowModel } from "@tanstack/react-table";
 
-const sizes = {
-  xs: "p-2.5",
-};
-
 const ReactTable = ({
   columns,
   data = [],
@@ -13,7 +9,6 @@ const ReactTable = ({
   bodyProps = {},
   className = "",
   rowDataProps = { className: "" },
-  size,
 
   ...restConfig
 }) => {
@@ -45,9 +40,7 @@ const ReactTable = ({
         {table.getRowModel().rows.map((row) => (
           <tr {...rowDataProps} className={`${rowDataProps?.className}`} key={row.id}>
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id} className={size ? sizes[size] : ``}>
-                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-              </td>
+              <td key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</td>
             ))}
           </tr>
         ))}

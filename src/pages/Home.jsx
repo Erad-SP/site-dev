@@ -13,13 +13,13 @@ const Home = () => {
       </p>
       <ul style={{ listStyle: "none", padding: "0" }}>
         <li style={{ marginBottom: "10px" }}>
-          <Link to="/mainpage" style={{ color: "#87CEFA", textDecoration: "none" }}>
-            Mainpage
+          <Link to="/" style={{ color: "#87CEFA", textDecoration: "none" }}>
+            PaginaPrincipal
           </Link>
         </li>
         <li style={{ marginBottom: "10px" }}>
-          <Link to="/inscrio" style={{ color: "#87CEFA", textDecoration: "none" }}>
-            Inscrio
+          <Link to="/inscricao" style={{ color: "#87CEFA", textDecoration: "none" }}>
+            Inscricao
           </Link>
         </li>
         <li style={{ marginBottom: "10px" }}>
