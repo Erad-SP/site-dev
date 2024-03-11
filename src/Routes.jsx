@@ -8,18 +8,18 @@ import ChamadadeTrabalhos from "pages/ChamadadeTrabalhos";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "dhiwise-dashboard", element: <Home /> },
+    { path: "/dhiwise-dashboard", element: <Home /> }, // Note the leading slash "/"
     { path: "*", element: <NotFound /> },
     {
       path: "/",
       element: <PaginaPrincipal />,
     },
     {
-      path: "inscricao",
+      path: "/inscricao",
       element: <Inscricao />,
     },
     {
-      path: "chamadadetrabalhos",
+      path: "/chamadadetrabalhos",
       element: <ChamadadeTrabalhos />,
     },
   ]);

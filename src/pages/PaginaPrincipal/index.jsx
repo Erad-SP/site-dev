@@ -31,7 +31,7 @@ export default function PaginaPrincipalPage() {
                   </div>
                   <div className="flex flex-row justify-center w-[22%] md:w-full">
                     <div className="flex flex-row justify-center w-[72%] p-0.5">
-                    <a href="" className="ml-[15px] md:ml-0">
+                    <a href="/" className="ml-[15px] md:ml-0">
                       <Heading as="p" className="mt-0.5 tracking-[0.20px] text-center">
                         Programação
                       </Heading>
