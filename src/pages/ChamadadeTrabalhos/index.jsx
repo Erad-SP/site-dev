@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import { Heading, Img, Text } from "../../components";
 
 export default function ChamadadeTrabalhosPage() {
@@ -31,26 +32,24 @@ export default function ChamadadeTrabalhosPage() {
                     </div>
                     <div className="flex flex-row justify-center w-[22%] md:w-full">
                       <div className="flex flex-row justify-center w-[72%] p-0.5">
-                      <a href="/" className="ml-[15px] md:ml-0">
+                      <Link to="/">
                         <Heading as="p" className="mt-0.5 tracking-[0.20px] text-center" scrollOffset={1900}>
                           Programação
                         </Heading>
-                        </a>
+                      </Link>
                       </div>
                     </div>
-                    <a href="/inscricao" className="ml-[15px] md:ml-0">
+                    <Link to="/inscricao">
                       <Heading as="p" className="tracking-[0.20px] text-center">
                         Inscrições
                       </Heading>
-                    </a>
+                    </Link>
                     <div className="flex flex-row w-[32%] md:w-full ml-3.5 gap-px md:ml-0">
                       <div className="flex flex-row justify-center w-[50%]">
                         <div className="flex flex-row justify-center w-full p-[3px]">
-                        <a href="/chamadasdetrabalhos" className="ml-[15px] md:ml-0">
                           <Heading as="p" className="tracking-[0.20px] text-center">
                             Submissões
                           </Heading>
-                        </a>
                         </div>
                       </div>
                       <div className="flex flex-row justify-center w-[50%]">

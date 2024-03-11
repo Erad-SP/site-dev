@@ -28,9 +28,7 @@ export default function Header({ ...props }) {
                   </Heading>
                 </div>
               </div>
-              <a href="#">
                 <Text />
-              </a>
             </div>
           </div>
         </div>

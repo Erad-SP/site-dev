@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Heading, Img, Text, Button } from "../../components";
 import { ReactTable } from "../../components/ReactTable";
+import { Link } from "react-router-dom";
 import { createColumnHelper } from "@tanstack/react-table";
 
 const tableData = [
@@ -232,26 +233,24 @@ export default function InscricaoPage() {
                     </div>
                     <div className="flex flex-row justify-center w-[22%] md:w-full">
                       <div className="flex flex-row justify-center w-[72%] p-0.5">
-                      <a href="/" className="ml-[15px] md:ml-0">
+                      <Link to="/">
                         <Heading as="p" className="mt-0.5 tracking-[0.20px] text-center" scrollOffset={1900}>
                           Programação
                         </Heading>
-                      </a>
+                      </Link>
                       </div>
                     </div>
-                    <a href="/inscricao" className="ml-[15px] md:ml-0">
                       <Heading as="p" className="tracking-[0.20px] text-center">
                         Inscrições
                       </Heading>
-                    </a>
                     <div className="flex flex-row w-[32%] md:w-full ml-3.5 gap-px md:ml-0">
                       <div className="flex flex-row justify-center w-[50%]">
                         <div className="flex flex-row justify-center w-full p-[3px]">
-                        <a href="/chamadadetrabalhos" className="ml-[15px] md:ml-0">
+                        <Link to="/chamadadetrabalhos">
                           <Heading as="p" className="tracking-[0.20px] text-center">
                             Submissões
                           </Heading>
-                          </a>
+                        </Link>
                         </div>
                       </div>
                       <div className="flex flex-row justify-center w-[50%]">
